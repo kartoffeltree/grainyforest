@@ -427,7 +427,7 @@ var activeSectionElement = $(".main-section-move-me");
             $(".main-section-content-wrapper-ux-down").hide();
           }, 1500);
 
-        } else else if (activeSectionElement.hasClass("main-section-move-photography-down")) {
+        } else if (activeSectionElement.hasClass("main-section-move-photography-down")) {
           // photography
 
           $(".main-section-move-identity-up").addClass("be-left");
@@ -507,7 +507,7 @@ var activeSectionElement = $(".main-section-move-me");
             $(".main-section-content-wrapper-ux-up").hide();
           }, 1500);
 
-        } else (activeSectionElement.hasClass("main-section-move-identity-up")) {
+        } else if (activeSectionElement.hasClass("main-section-move-identity-up")) {
           // identity
 
           $(".main-section-move-photography-down").addClass("be-right");
