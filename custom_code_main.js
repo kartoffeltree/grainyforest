@@ -4,18 +4,21 @@ var activeSectionElement = $(".main-section-move-me");
 
   $(document).ready(function () {
 
-    activeSectionElement = $(".main-section-move-me");
+    activeSectionElement = $(".main-section-move-me-up");
     activeContentElement = $(".main-section-content-wrapper-me");
 
     $("#main-nav-me").addClass("main-nav-active-up").addClass("main-nav-active");
 
-    $(".main-section-move-ux").hide();
+    $(".main-section-move-ux-up").hide();
+    $(".main-section-move-ux-down").hide();
     $(".main-section-content-wrapper-ux").hide();
 
-    $(".main-section-move-identity").hide();
+    $(".main-section-move-identity-up").hide();
+    $(".main-section-move-identity-down").hide();
     $(".main-section-content-wrapper-identity").hide();
 
-    $(".main-section-move-photography").hide();
+    $(".main-section-move-photography-up").hide();
+    $(".main-section-move-photography-down").hide();
     $(".main-section-content-wrapper-photography").hide();
 
     $(".main-section-content-wrapper").height("150vh");
