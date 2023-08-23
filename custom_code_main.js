@@ -368,7 +368,7 @@ var activeSectionElement = $(".main-section-move-me");
             $(".main-section-content-wrapper-ux-up").hide();
           }, 1500);
 
-        } else else if (activeSectionElement.hasClass("main-section-move-photography-up")) {
+        } else if (activeSectionElement.hasClass("main-section-move-photography-up")) {
           // photography
 
           $(".main-section-move-identity-down").addClass("be-left");
