@@ -623,8 +623,10 @@ $(document).ready(function () {
         activeSectionElement.hasClass("main-section-move-ux-up") ||
         activeSectionElement.hasClass("main-section-move-identity-up") ||
         activeSectionElement.hasClass("main-section-move-photography-up")) {
+          console.log("up up up up up uupupup up ");
         activeSectionElement = $(".main-section-move-photography-up");
       } else {
+        console.log("down down down dwondsn");
         activeSectionElement = $(".main-section-move-photography-down");
       }
 
