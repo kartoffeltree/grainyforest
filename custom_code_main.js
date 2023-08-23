@@ -178,9 +178,9 @@ $(document).ready(function () {
         activeSectionElement.hasClass("main-section-move-ux-up") ||
         activeSectionElement.hasClass("main-section-move-identity-up") ||
         activeSectionElement.hasClass("main-section-move-photography-up")) {
-        activeSectionElement = $(".main-section-move-me-up");
-      } else {
         activeSectionElement = $(".main-section-move-me-down");
+      } else {
+        activeSectionElement = $(".main-section-move-me-up");
       }
 
     }
@@ -328,9 +328,9 @@ $(document).ready(function () {
         activeSectionElement.hasClass("main-section-move-ux-up") ||
         activeSectionElement.hasClass("main-section-move-identity-up") ||
         activeSectionElement.hasClass("main-section-move-photography-up")) {
-        activeSectionElement = $(".main-section-move-ux-up");
-      } else {
         activeSectionElement = $(".main-section-move-ux-down");
+      } else {
+        activeSectionElement = $(".main-section-move-ux-up");
       }
 
     }
@@ -476,9 +476,9 @@ $(document).ready(function () {
         activeSectionElement.hasClass("main-section-move-ux-up") ||
         activeSectionElement.hasClass("main-section-move-identity-up") ||
         activeSectionElement.hasClass("main-section-move-photography-up")) {
-        activeSectionElement = $(".main-section-move-identity-up");
-      } else {
         activeSectionElement = $(".main-section-move-identity-down");
+      } else {
+        activeSectionElement = $(".main-section-move-identity-up");
       }
 
     }
@@ -624,10 +624,10 @@ $(document).ready(function () {
         activeSectionElement.hasClass("main-section-move-identity-up") ||
         activeSectionElement.hasClass("main-section-move-photography-up")) {
           console.log("up up up up up uupupup up ");
-        activeSectionElement = $(".main-section-move-photography-up");
+        activeSectionElement = $(".main-section-move-photography-down");
       } else {
         console.log("down down down dwondsn");
-        activeSectionElement = $(".main-section-move-photography-down");
+        activeSectionElement = $(".main-section-move-photography-up");
       }
 
     }
