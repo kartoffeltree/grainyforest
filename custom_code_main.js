@@ -9,6 +9,8 @@ var activeSectionElement = $(".main-section-move-me");
 
     $("#main-nav-me").addClass("main-nav-active-up").addClass("main-nav-active");
 
+    $(".main-section-move-me-down").hide();
+
     $(".main-section-move-ux-up").hide();
     $(".main-section-move-ux-down").hide();
     $(".main-section-content-wrapper-ux").hide();
@@ -171,7 +173,13 @@ var activeSectionElement = $(".main-section-move-me");
         }
 
         $(".main-section-content-wrapper").height("150vh");
-        activeSectionElement = $(".main-section-move-me");
+
+        if (activeSectionElement.hasClass("main-section-move-me-up")) {
+          activeSectionElement = $(".main-section-move-me-up");
+        } else {
+          activeSectionElement = $(".main-section-move-me-down");
+        }
+        
       }
 
       $("#main-nav-me").addClass("main-nav-active");
@@ -312,7 +320,12 @@ var activeSectionElement = $(".main-section-move-me");
         }
 
         $(".main-section-content-wrapper").height("400vh");
-        activeSectionElement = $(".main-section-move-ux");
+        
+        if (activeSectionElement.hasClass("main-section-move-ux-up")) {
+          activeSectionElement = $(".main-section-move-ux-up");
+        } else {
+          activeSectionElement = $(".main-section-move-ux-down");
+        }
 
       }
 
@@ -452,7 +465,12 @@ var activeSectionElement = $(".main-section-move-me");
         }
 
         $(".main-section-content-wrapper").height("400vh");
-        activeSectionElement = $(".main-section-move-identity");
+        
+        if (activeSectionElement.hasClass("main-section-move-identity-up")) {
+          activeSectionElement = $(".main-section-move-identity-up");
+        } else {
+          activeSectionElement = $(".main-section-move-identity-down");
+        }
 
       }
 
@@ -591,7 +609,12 @@ var activeSectionElement = $(".main-section-move-me");
         }
 
         $(".main-section-content-wrapper").height("400vh");
-        activeSectionElement = $(".main-section-move-photography");
+        
+        if (activeSectionElement.hasClass("main-section-move-photography-up")) {
+          activeSectionElement = $(".main-section-move-photography-up");
+        } else {
+          activeSectionElement = $(".main-section-move-photography-down");
+        }
 
       }
 
