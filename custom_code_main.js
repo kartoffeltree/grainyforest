@@ -56,6 +56,16 @@ $(document).ready(function () {
   $("#main-nav-me").click(function () {
     if (!isSwitching) {
       isSwitching = true;
+      console.log(isSwitching);
+
+      setTimeout(function () {
+        consoloe.log(isSwitching);
+      }, 1200);
+
+      setTimeout(function () {
+        consoloe.log(isSwitching);
+      }, 1700);
+      
       setTimeout(function () {
         isSwitching = false;
       }, 1501);
