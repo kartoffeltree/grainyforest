@@ -1,5 +1,6 @@
 var activeSectionElement = $(".main-section-move-me");
 var activeContentElement = $(".main-section-content-wrapper-me");
+var isSwitching = false;
 // my stuff
 
 $(document).ready(function () {
@@ -53,8 +54,13 @@ $(document).ready(function () {
 
 
   $("#main-nav-me").click(function () {
-    if (activeSectionElement.hasClass("main-section-move-me-up") || activeSectionElement.hasClass("main-section-move-me-down")) {
-
+    if (activeSectionElement.hasClass("main-section-move-me-up") || activeSectionElement.hasClass("main-section-move-me-down") || !isSwitching) {
+      
+      isSwitching = true;
+      setTimeout(function() { 
+        isSwitching = false;
+      }, 1501);
+      
     } else {
       resetAllClasses();
 
