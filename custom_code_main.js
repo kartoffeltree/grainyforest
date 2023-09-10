@@ -56,16 +56,6 @@ $(document).ready(function () {
   $("#main-nav-me").click(function () {
     if (!isSwitching) {
       isSwitching = true;
-      console.log(isSwitching);
-
-      setTimeout(function () {
-        consoloe.log(isSwitching);
-      }, 1200);
-
-      setTimeout(function () {
-        consoloe.log(isSwitching);
-      }, 1700);
-      
       setTimeout(function () {
         isSwitching = false;
       }, 1501);
@@ -212,143 +202,151 @@ $(document).ready(function () {
 
   $("#main-nav-ux").click(function () {
 
-    if (activeSectionElement.hasClass("main-section-move-ux-up") || activeSectionElement.hasClass("main-section-move-ux-down")) {
+    if (!isSwitching) {
+      isSwitching = true;
+      setTimeout(function () {
+        isSwitching = false;
+      }, 1501);
 
-    } else {
+      if (activeSectionElement.hasClass("main-section-move-ux-up") || activeSectionElement.hasClass("main-section-move-ux-down")) {
 
-      resetAllClasses();
-
-      if (activeSectionElement.hasClass("main-section-move-me-up")) {
-
-        $(".main-section-move-ux-down").addClass("be-right");
-        $(".main-section-content-wrapper-ux").addClass("be-right");
-        $(".main-section-move-ux-down").show();
-        $(".main-section-content-wrapper-ux").show();
-
-        resetAllClasses();
-
-        $(".main-section-move-ux-down").addClass("go-middle");
-        $(".main-section-content-wrapper-ux").addClass("go-middle");
-        $(".main-section-move-me-up").addClass("go-left");
-        $(".main-section-content-wrapper-me").addClass("go-left");
-        setTimeout(function () {
-          $(".main-section-move-me-up").hide();
-          $(".main-section-content-wrapper-me").hide();
-        }, 1500);
-
-      } else if (activeSectionElement.hasClass("main-section-move-identity-up")) {
-
-        $(".main-section-move-ux-down").addClass("be-left");
-        $(".main-section-content-wrapper-ux").addClass("be-left");
-        $(".main-section-move-ux-down").show();
-        $(".main-section-content-wrapper-ux").show();
-
-        resetAllClasses();
-
-        $(".main-section-move-ux-down").addClass("go-middle");
-        $(".main-section-content-wrapper-ux").addClass("go-middle");
-        $(".main-section-move-identity-up").addClass("go-right");
-        $(".main-section-content-wrapper-identity").addClass("go-right");
-        setTimeout(function () {
-          $(".main-section-move-identity-up").hide();
-          $(".main-section-content-wrapper-identity").hide();
-        }, 1500);
-
-      } else if (activeSectionElement.hasClass("main-section-move-photography-up")) {
-        //photography
-
-        $(".main-section-move-ux-down").addClass("be-left");
-        $(".main-section-content-wrapper-ux").addClass("be-left");
-        $(".main-section-move-ux-down").show();
-        $(".main-section-content-wrapper-ux").show();
-
-        resetAllClasses();
-
-        $(".main-section-move-ux-down").addClass("go-middle");
-        $(".main-section-content-wrapper-ux").addClass("go-middle");
-        $(".main-section-move-photography-up").addClass("go-right");
-        $(".main-section-content-wrapper-photography").addClass("go-right");
-        setTimeout(function () {
-          $(".main-section-move-photography-up").hide();
-          $(".main-section-content-wrapper-photography").hide();
-        }, 1500);
-
-      }
-
-      if (activeSectionElement.hasClass("main-section-move-me-down")) {
-
-        $(".main-section-move-ux-up").addClass("be-right");
-        $(".main-section-content-wrapper-ux").addClass("be-right");
-        $(".main-section-move-ux-up").show();
-        $(".main-section-content-wrapper-ux").show();
-
-        resetAllClasses();
-
-        $(".main-section-move-ux-up").addClass("go-middle");
-        $(".main-section-content-wrapper-ux").addClass("go-middle");
-        $(".main-section-move-me-down").addClass("go-left");
-        $(".main-section-content-wrapper-me").addClass("go-left");
-        setTimeout(function () {
-          $(".main-section-move-me-down").hide();
-          $(".main-section-content-wrapper-me").hide();
-        }, 1500);
-
-      } else if (activeSectionElement.hasClass("main-section-move-identity-down")) {
-
-        $(".main-section-move-ux-up").addClass("be-left");
-        $(".main-section-content-wrapper-ux").addClass("be-left");
-        $(".main-section-move-ux-up").show();
-        $(".main-section-content-wrapper-ux").show();
-
-        resetAllClasses();
-
-        $(".main-section-move-ux-up").addClass("go-middle");
-        $(".main-section-content-wrapper-ux").addClass("go-middle");
-        $(".main-section-move-identity-down").addClass("go-right");
-        $(".main-section-content-wrapper-identity").addClass("go-right");
-        setTimeout(function () {
-          $(".main-section-move-identity-down").hide();
-          $(".main-section-content-wrapper-identity").hide();
-        }, 1500);
-
-      } else if (activeSectionElement.hasClass("main-section-move-photography-down")) {
-        //photography
-
-        $(".main-section-move-ux-up").addClass("be-left");
-        $(".main-section-content-wrapper-ux").addClass("be-left");
-        $(".main-section-move-ux-up").show();
-        $(".main-section-content-wrapper-ux").show();
-
-        resetAllClasses();
-
-        $(".main-section-move-ux-up").addClass("go-middle");
-        $(".main-section-content-wrapper-ux").addClass("go-middle");
-        $(".main-section-move-photography-down").addClass("go-right");
-        $(".main-section-content-wrapper-photography").addClass("go-right");
-        setTimeout(function () {
-          $(".main-section-move-photography-down").hide();
-          $(".main-section-content-wrapper-photography").hide();
-        }, 1500);
-
-      }
-
-      $(".main-section-content-wrapper").height("400vh");
-
-      if (activeSectionElement.hasClass("main-section-move-me-up") ||
-        activeSectionElement.hasClass("main-section-move-ux-up") ||
-        activeSectionElement.hasClass("main-section-move-identity-up") ||
-        activeSectionElement.hasClass("main-section-move-photography-up")) {
-        activeSectionElement = $(".main-section-move-ux-down");
       } else {
-        activeSectionElement = $(".main-section-move-ux-up");
+  
+        resetAllClasses();
+  
+        if (activeSectionElement.hasClass("main-section-move-me-up")) {
+  
+          $(".main-section-move-ux-down").addClass("be-right");
+          $(".main-section-content-wrapper-ux").addClass("be-right");
+          $(".main-section-move-ux-down").show();
+          $(".main-section-content-wrapper-ux").show();
+  
+          resetAllClasses();
+  
+          $(".main-section-move-ux-down").addClass("go-middle");
+          $(".main-section-content-wrapper-ux").addClass("go-middle");
+          $(".main-section-move-me-up").addClass("go-left");
+          $(".main-section-content-wrapper-me").addClass("go-left");
+          setTimeout(function () {
+            $(".main-section-move-me-up").hide();
+            $(".main-section-content-wrapper-me").hide();
+          }, 1500);
+  
+        } else if (activeSectionElement.hasClass("main-section-move-identity-up")) {
+  
+          $(".main-section-move-ux-down").addClass("be-left");
+          $(".main-section-content-wrapper-ux").addClass("be-left");
+          $(".main-section-move-ux-down").show();
+          $(".main-section-content-wrapper-ux").show();
+  
+          resetAllClasses();
+  
+          $(".main-section-move-ux-down").addClass("go-middle");
+          $(".main-section-content-wrapper-ux").addClass("go-middle");
+          $(".main-section-move-identity-up").addClass("go-right");
+          $(".main-section-content-wrapper-identity").addClass("go-right");
+          setTimeout(function () {
+            $(".main-section-move-identity-up").hide();
+            $(".main-section-content-wrapper-identity").hide();
+          }, 1500);
+  
+        } else if (activeSectionElement.hasClass("main-section-move-photography-up")) {
+          //photography
+  
+          $(".main-section-move-ux-down").addClass("be-left");
+          $(".main-section-content-wrapper-ux").addClass("be-left");
+          $(".main-section-move-ux-down").show();
+          $(".main-section-content-wrapper-ux").show();
+  
+          resetAllClasses();
+  
+          $(".main-section-move-ux-down").addClass("go-middle");
+          $(".main-section-content-wrapper-ux").addClass("go-middle");
+          $(".main-section-move-photography-up").addClass("go-right");
+          $(".main-section-content-wrapper-photography").addClass("go-right");
+          setTimeout(function () {
+            $(".main-section-move-photography-up").hide();
+            $(".main-section-content-wrapper-photography").hide();
+          }, 1500);
+  
+        }
+  
+        if (activeSectionElement.hasClass("main-section-move-me-down")) {
+  
+          $(".main-section-move-ux-up").addClass("be-right");
+          $(".main-section-content-wrapper-ux").addClass("be-right");
+          $(".main-section-move-ux-up").show();
+          $(".main-section-content-wrapper-ux").show();
+  
+          resetAllClasses();
+  
+          $(".main-section-move-ux-up").addClass("go-middle");
+          $(".main-section-content-wrapper-ux").addClass("go-middle");
+          $(".main-section-move-me-down").addClass("go-left");
+          $(".main-section-content-wrapper-me").addClass("go-left");
+          setTimeout(function () {
+            $(".main-section-move-me-down").hide();
+            $(".main-section-content-wrapper-me").hide();
+          }, 1500);
+  
+        } else if (activeSectionElement.hasClass("main-section-move-identity-down")) {
+  
+          $(".main-section-move-ux-up").addClass("be-left");
+          $(".main-section-content-wrapper-ux").addClass("be-left");
+          $(".main-section-move-ux-up").show();
+          $(".main-section-content-wrapper-ux").show();
+  
+          resetAllClasses();
+  
+          $(".main-section-move-ux-up").addClass("go-middle");
+          $(".main-section-content-wrapper-ux").addClass("go-middle");
+          $(".main-section-move-identity-down").addClass("go-right");
+          $(".main-section-content-wrapper-identity").addClass("go-right");
+          setTimeout(function () {
+            $(".main-section-move-identity-down").hide();
+            $(".main-section-content-wrapper-identity").hide();
+          }, 1500);
+  
+        } else if (activeSectionElement.hasClass("main-section-move-photography-down")) {
+          //photography
+  
+          $(".main-section-move-ux-up").addClass("be-left");
+          $(".main-section-content-wrapper-ux").addClass("be-left");
+          $(".main-section-move-ux-up").show();
+          $(".main-section-content-wrapper-ux").show();
+  
+          resetAllClasses();
+  
+          $(".main-section-move-ux-up").addClass("go-middle");
+          $(".main-section-content-wrapper-ux").addClass("go-middle");
+          $(".main-section-move-photography-down").addClass("go-right");
+          $(".main-section-content-wrapper-photography").addClass("go-right");
+          setTimeout(function () {
+            $(".main-section-move-photography-down").hide();
+            $(".main-section-content-wrapper-photography").hide();
+          }, 1500);
+  
+        }
+  
+        $(".main-section-content-wrapper").height("400vh");
+  
+        if (activeSectionElement.hasClass("main-section-move-me-up") ||
+          activeSectionElement.hasClass("main-section-move-ux-up") ||
+          activeSectionElement.hasClass("main-section-move-identity-up") ||
+          activeSectionElement.hasClass("main-section-move-photography-up")) {
+          activeSectionElement = $(".main-section-move-ux-down");
+        } else {
+          activeSectionElement = $(".main-section-move-ux-up");
+        }
+  
       }
+  
+      $("#main-nav-ux").addClass("main-nav-active");
+      $("#main-nav-me").removeClass("main-nav-active");
+      $("#main-nav-identity").removeClass("main-nav-active");
+      $("#main-nav-photography").removeClass("main-nav-active");
 
     }
-
-    $("#main-nav-ux").addClass("main-nav-active");
-    $("#main-nav-me").removeClass("main-nav-active");
-    $("#main-nav-identity").removeClass("main-nav-active");
-    $("#main-nav-photography").removeClass("main-nav-active");
   });
 
 
