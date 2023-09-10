@@ -381,7 +381,7 @@ $(document).ready(function () {
           $(".main-section-content-wrapper-me").addClass("go-left");
           setTimeout(function () {
             $(".main-section-move-me-up").hide();
-            $(".main-section-content-wrapper-me-up").hide();
+            $(".main-section-content-wrapper-me").hide();
           }, 1500);
   
         } else if (activeSectionElement.hasClass("main-section-move-ux-up")) {
